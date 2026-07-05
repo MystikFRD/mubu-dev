@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      id="metaDescription"
+      content="Mustafa Budak — Computer Science student, automation apprentice, and builder at mubu.dev"
+    />
+    <meta name="author" content="Mustafa Budak" />
+    <title id="pageTitle">mubu.dev — Mustafa Budak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  </head>
+  <body>
+    <div class="mode-toggle" id="modeToggle">
+      <span class="mode-label" id="modeLabel">idle mode</span>
+      <span class="mode-dot"></span>
+    </div>
+
+    <nav class="side-nav" id="sideNav" aria-label="Section navigation">
+      <a href="#" class="nav-logo" aria-label="mubu.dev home">mubu.dev</a>
+      <div class="lang-toggle" id="langToggle" role="group" aria-label="Language">
+        <button class="lang-btn active" data-lang="en" type="button">EN</button>
+        <button class="lang-btn" data-lang="de" type="button">DE</button>
+      </div>
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navMenu"
+        aria-label="Open menu"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <div class="nav-menu" id="navMenu">
+        <ol class="nav-links">
+          <li><a href="#about" data-section="about"><span class="nav-slash">/</span> <span data-i18n="nav.about">about</span></a></li>
+          <li><a href="#experience" data-section="experience"><span class="nav-slash">/</span> <span data-i18n="nav.experience">experience</span></a></li>
+          <li><a href="#education" data-section="education"><span class="nav-slash">/</span> <span data-i18n="nav.education">education</span></a></li>
+          <li><a href="#languages" data-section="languages"><span class="nav-slash">/</span> <span data-i18n="nav.languages">languages</span></a></li>
+          <li><a href="#projects" data-section="projects"><span class="nav-slash">/</span> <span data-i18n="nav.projects">projects</span></a></li>
+          <li><a href="#contact" data-section="contact"><span class="nav-slash">/</span> <span data-i18n="nav.contact">contact</span></a></li>
+        </ol>
+        <div class="nav-social">
+          <a href="https://www.linkedin.com/in/mustafa-budak-430b30231/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </nav>
+    <div class="nav-backdrop" id="navBackdrop" hidden></div>
+
+    <main class="content">
+      <header class="hero" id="home">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <p class="hero-eyebrow">mubu.dev</p>
+            <h1 class="hero-name">Mustafa Budak</h1>
+            <p class="hero-tagline" id="heroTagline">
+              hi, mustafa here.<span class="cursor">|</span>
+            </p>
+            <p class="hero-bio" data-i18n="hero.bio"></p>
+            <a
+              class="cta-button"
+              href="https://www.linkedin.com/in/mustafa-budak-430b30231/"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="hero.cta"
+            >Say hi!</a>
+          </div>
+          <div class="hero-photo-wrap">
+            <div class="hero-photo-frame">
+              <img
+                src="profile.jpg"
+                alt="Mustafa Budak portrait"
+                class="hero-photo"
+                id="profilePhoto"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+              />
+              <div class="hero-photo-fallback" aria-hidden="true">MB</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="section" id="about">
+        <h2 class="section-title"><span class="section-slash">/</span> <span data-i18n="about.title">about me</span></h2>
+        <div class="section-body">
+          <p data-i18n="about.p1"></p>
+          <p data-i18n="about.p2"></p>
+          <p data-i18n="about.techIntro"></p>
+          <ul class="tech-list" id="techList"></ul>
+          <p class="about-aside" data-i18n="about.aside"></p>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <h2 class="section-title"><span class="section-slash">/</span> <span data-i18n="experience.title">experience</span></h2>
+        <div class="tabs" id="expTabs" role="tablist" aria-label="Work experience">
+          <button class="tab active" role="tab" aria-selected="true" data-tab="ford-apprenticeship" data-i18n="experience.tabApprenticeship">Ford — Apprenticeship</button>
+          <button class="tab" role="tab" aria-selected="false" data-tab="ford-production" data-i18n="experience.tabProduction">Ford — Production</button>
+        </div>
+        <div class="tab-panels">
+          <article class="tab-panel active" id="ford-apprenticeship" role="tabpanel">
+            <header class="role-header">
+              <h3><span data-i18n="experience.roleApprenticeship"></span> <span class="role-badge" data-i18n="experience.badgeApprenticeship">Apprenticeship</span></h3>
+              <p class="role-meta" data-i18n="experience.metaApprenticeship"></p>
+            </header>
+            <ul class="role-bullets" id="bulletsApprenticeship"></ul>
+          </article>
+          <article class="tab-panel" id="ford-production" role="tabpanel" hidden>
+            <header class="role-header">
+              <h3 data-i18n="experience.roleProduction">Production</h3>
+              <p class="role-meta" data-i18n="experience.metaProduction"></p>
+            </header>
+            <ul class="role-bullets" id="bulletsProduction"></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <h2 class="section-title"><span class="section-slash">/</span> <span data-i18n="education.title">education</span></h2>
+        <div class="card-grid">
+          <article class="info-card">
+            <h3 data-i18n="education.degree1">B.Sc Computer Science</h3>
+            <p class="card-meta" data-i18n="education.school1"></p>
+            <p class="card-detail" data-i18n="education.detail1"></p>
+          </article>
+          <article class="info-card">
+            <h3 data-i18n="education.degree2"></h3>
+            <p class="card-meta" data-i18n="education.school2"></p>
+            <p class="card-detail" data-i18n="education.detail2"></p>
+          </article>
+        </div>
+        <h3 class="subsection-title" data-i18n="education.certsTitle">Certifications</h3>
+        <div class="cert-grid">
+          <div class="cert-card">
+            <span class="cert-issuer">TÜV Rheinland</span>
+            <span class="cert-name" data-i18n="education.cert1Name">VDE 0701 / 0702</span>
+            <span class="cert-date">Jun 2025</span>
+          </div>
+          <div class="cert-card">
+            <span class="cert-issuer">Ford Motor Company</span>
+            <span class="cert-name" data-i18n="education.cert2Name">FANUC Grundlagen</span>
+            <span class="cert-date">Sep 2025</span>
+          </div>
+          <div class="cert-card">
+            <span class="cert-issuer">BGHM</span>
+            <span class="cert-name" data-i18n="education.cert3Name">Sicherheitsbeauftragter I &amp; II</span>
+            <span class="cert-date">Nov 2025</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="languages">
+        <h2 class="section-title"><span class="section-slash">/</span> <span data-i18n="languages.title">languages</span></h2>
+        <div class="lang-grid">
+          <div class="lang-card fluent">
+            <span class="lang-name" data-i18n="languages.de.name">Deutsch</span>
+            <span class="lang-level" data-i18n="languages.de.level">Native / Fluent</span>
+          </div>
+          <div class="lang-card fluent">
+            <span class="lang-name" data-i18n="languages.en.name">English</span>
+            <span class="lang-level" data-i18n="languages.en.level">Fluent</span>
+          </div>
+          <div class="lang-card">
+            <span class="lang-name" data-i18n="languages.tr.name">Türkçe</span>
+            <span class="lang-level" data-i18n="languages.tr.level">Conversational</span>
+          </div>
+          <div class="lang-card learning">
+            <span class="lang-name" data-i18n="languages.ja.name">日本語</span>
+            <span class="lang-level" data-i18n="languages.ja.level">Learning</span>
+            <span class="lang-bar"><span style="width: 25%"></span></span>
+          </div>
+          <div class="lang-card planned">
+            <span class="lang-name" data-i18n="languages.ko.name">한국어</span>
+            <span class="lang-level" data-i18n="languages.ko.level">Planned</span>
+            <span class="lang-bar"><span style="width: 5%"></span></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <h2 class="section-title"><span class="section-slash">/</span> <span data-i18n="projects.title">projects</span></h2>
+        <p class="section-intro" data-i18n="projects.intro"></p>
+        <div class="project-grid">
+          <article class="project-card pending">
+            <div class="project-status" data-i18n="projects.status">pending</div>
+            <h3 data-i18n="projects.p1Title">Automation Dashboard</h3>
+            <p data-i18n="projects.p1Desc"></p>
+            <span class="project-tech" data-i18n="projects.p1Tech">React · Python · TBD</span>
+          </article>
+          <article class="project-card pending">
+            <div class="project-status" data-i18n="projects.status">pending</div>
+            <h3 data-i18n="projects.p2Title">Language Study Tracker</h3>
+            <p data-i18n="projects.p2Desc"></p>
+            <span class="project-tech" data-i18n="projects.p2Tech">TypeScript · TBD</span>
+          </article>
+          <article class="project-card pending">
+            <div class="project-status" data-i18n="projects.status">pending</div>
+            <h3 data-i18n="projects.p3Title">mubu.dev</h3>
+            <p data-i18n="projects.p3Desc"></p>
+            <span class="project-tech" data-i18n="projects.p3Tech">HTML · CSS · JavaScript</span>
+          </article>
+          <article class="project-card pending">
+            <div class="project-status" data-i18n="projects.status">pending</div>
+            <h3 data-i18n="projects.p4Title">Open Source Contribution</h3>
+            <p data-i18n="projects.p4Desc"></p>
+            <span class="project-tech" data-i18n="projects.p4Tech">TBD</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <h2 class="section-title"><span class="section-slash">/</span> <span data-i18n="contact.title">contact</span></h2>
+        <div class="contact-block">
+          <p data-i18n="contact.text"></p>
+          <a
+            class="cta-button"
+            href="https://www.linkedin.com/in/mustafa-budak-430b30231/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="contact.cta"
+          >LinkedIn →</a>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p data-i18n="footer.built">Built and designed by <strong>Mustafa Budak</strong>.</p>
+        <p><span data-i18n="footer.rights">All rights reserved. ©</span> <span id="year"></span> mubu.dev</p>
+      </footer>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
