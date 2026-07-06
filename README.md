@@ -67,4 +67,4 @@ Your choice is saved in `localStorage`.
 
 ## License
 
-© Mustafa Budak. All rights reserved.
+© Mustafa Budak. All rights reserved. Inspired by Gazi Jarin's Portfolio Site
