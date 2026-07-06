@@ -2,10 +2,11 @@ import { useState } from "react";
 import { useApp } from "../context/AppContext";
 import { useTypewriter } from "../hooks/useTypewriter";
 import { I18nText } from "./I18nText";
+import profilePhoto from "../assets/profile.jpg";
 
 export function Hero() {
   const { t } = useApp();
-  const [showFallback, setShowFallback] = useState(false);
+  const [photoFailed, setPhotoFailed] = useState(false);
   const taglineHtml = useTypewriter(t.hero.phrases, t.hero.greeting);
 
   return (
@@ -32,21 +33,19 @@ export function Hero() {
         </div>
         <div className="hero-photo-wrap">
           <div className="hero-photo-frame">
-            {!showFallback && (
+            {!photoFailed && (
               <img
-                src="/profile.jpg"
+                src={profilePhoto}
                 alt={t.hero.photoAlt}
                 className="hero-photo"
-                onError={() => setShowFallback(true)}
+                onError={() => setPhotoFailed(true)}
               />
             )}
-            <div
-              className="hero-photo-fallback"
-              aria-hidden="true"
-              style={{ display: showFallback ? "flex" : "none" }}
-            >
-              MB
-            </div>
+            {photoFailed && (
+              <div className="hero-photo-fallback" aria-hidden="true">
+                MB
+              </div>
+            )}
           </div>
         </div>
       </div>
