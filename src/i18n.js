@@ -1,4 +1,4 @@
-const i18n = {
+export const i18n = {
   en: {
     meta: {
       description:
@@ -110,7 +110,7 @@ const i18n = {
       p2Tech: "TypeScript · TBD",
       p3Title: "mubu.dev",
       p3Desc: "This portfolio — first real project. Designed and built from scratch.",
-      p3Tech: "HTML · CSS · JavaScript",
+      p3Tech: "React · Vite · CSS",
       p4Title: "Open Source Contribution",
       p4Desc: "First meaningful open-source PR. Repository TBD.",
       p4Tech: "TBD",
@@ -246,7 +246,7 @@ const i18n = {
       p2Tech: "TypeScript · TBD",
       p3Title: "mubu.dev",
       p3Desc: "Dieses Portfolio — erstes echtes Projekt. Von Grund auf entworfen und gebaut.",
-      p3Tech: "HTML · CSS · JavaScript",
+      p3Tech: "React · Vite · CSS",
       p4Title: "Open-Source-Beitrag",
       p4Desc: "Erster bedeutender Open-Source-PR. Repository noch offen.",
       p4Tech: "TBD",
