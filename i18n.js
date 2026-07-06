@@ -12,6 +12,7 @@ const i18n = {
       education: "education",
       languages: "languages",
       projects: "projects",
+      links: "links",
       contact: "contact",
       langAria: "Language",
       menuOpen: "Open menu",
@@ -100,10 +101,10 @@ const i18n = {
       title: "projects",
       intro: "Work in progress — placeholders for what's coming next.",
       status: "pending",
-      p1Title: "Automation Dashboard",
+      p1Title: "Tiny Model from Scratch",
       p1Desc:
-        "A web dashboard to visualize PLC states and production metrics. Planning phase.",
-      p1Tech: "React · Python · TBD",
+        "Training a small neural network from the ground up — no pretrained weights, just a gaming GPU and Python. A deliberately basic model to learn how AI actually works under the hood.",
+      p1Tech: "Python · PyTorch · CUDA",
       p2Title: "Language Study Tracker",
       p2Desc: "Personal tool for tracking Japanese and Korean study progress. Concept stage.",
       p2Tech: "TypeScript · TBD",
@@ -119,9 +120,19 @@ const i18n = {
       text: "Want to connect? Reach out on LinkedIn — always happy to chat about automation, CS, or language learning.",
       cta: "LinkedIn →",
     },
+    links: {
+      title: "links",
+      intro: "Find me elsewhere on the web.",
+      instagram: "Instagram",
+      linkedin: "LinkedIn",
+      github: "GitHub",
+      youtube: "YouTube",
+    },
     footer: {
       built: "Built and designed by <strong>Mustafa Budak</strong>.",
       rights: "All rights reserved. ©",
+      inspired:
+        'Design inspired by <a href="https://www.gazijarin.com/" target="_blank" rel="noopener noreferrer">Gazi Jarin\'s portfolio</a>.',
     },
   },
 
@@ -138,6 +149,7 @@ const i18n = {
       education: "ausbildung",
       languages: "sprachen",
       projects: "projekte",
+      links: "links",
       contact: "kontakt",
       langAria: "Sprache",
       menuOpen: "Menü öffnen",
@@ -224,10 +236,10 @@ const i18n = {
       title: "projekte",
       intro: "In Arbeit — Platzhalter für kommende Projekte.",
       status: "ausstehend",
-      p1Title: "Automatisierungs-Dashboard",
+      p1Title: "Mini-KI von Grund auf",
       p1Desc:
-        "Ein Web-Dashboard zur Visualisierung von SPS-Zuständen und Produktionskennzahlen. Planungsphase.",
-      p1Tech: "React · Python · TBD",
+        "Ein kleines neuronales Netz komplett selbst trainieren — ohne vortrainierte Gewichte, nur Gaming-GPU und Python. Bewusst einfach gehalten, um zu verstehen, wie KI unter der Haube funktioniert.",
+      p1Tech: "Python · PyTorch · CUDA",
       p2Title: "Sprachlern-Tracker",
       p2Desc:
         "Persönliches Tool zum Verfolgen des Japanisch- und Koreanisch-Lernfortschritts. Konzeptphase.",
@@ -244,9 +256,19 @@ const i18n = {
       text: "Lust auf Austausch? Schreib mir auf LinkedIn — über Automatisierung, Informatik oder Sprachenlernen.",
       cta: "LinkedIn →",
     },
+    links: {
+      title: "links",
+      intro: "Hier findest du mich im Netz.",
+      instagram: "Instagram",
+      linkedin: "LinkedIn",
+      github: "GitHub",
+      youtube: "YouTube",
+    },
     footer: {
       built: "Entworfen und gebaut von <strong>Mustafa Budak</strong>.",
       rights: "Alle Rechte vorbehalten. ©",
+      inspired:
+        'Design inspiriert von <a href="https://www.gazijarin.com/" target="_blank" rel="noopener noreferrer">Gazi Jarins Portfolio</a>.',
     },
   },
 };
