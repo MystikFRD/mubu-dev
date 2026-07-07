@@ -16,6 +16,7 @@
   --content-max: 900px;
   --layout-max: calc(var(--nav-width) + var(--content-max));
   --section-pad: 6rem;
+  --desktop-zoom: 1.4;
 }
 
 *,
@@ -297,6 +298,13 @@ body.production-mode .mode-dot {
   .hero {
     min-height: clamp(520px, 85vh, 720px);
     padding: clamp(3rem, 6vh, 4.5rem) 0;
+  }
+}
+
+/* Large desktop displays — scale up to match Mac-like proportions */
+@media (min-width: 1600px) {
+  html {
+    zoom: var(--desktop-zoom);
   }
 }
 
