@@ -16,7 +16,7 @@
   --content-max: 900px;
   --layout-max: calc(var(--nav-width) + var(--content-max));
   --section-pad: 6rem;
-  --desktop-zoom: 1.4;
+  --desktop-scale: 1.4;
 }
 
 *,
@@ -301,10 +301,33 @@ body.production-mode .mode-dot {
   }
 }
 
-/* Large desktop displays — scale up to match Mac-like proportions */
-@media (min-width: 1600px) {
+/* Standard desktop monitors (non-Retina) — ~140% scale */
+@media (min-width: 901px) and (max-resolution: 1.9dppx) {
   html {
-    zoom: var(--desktop-zoom);
+    zoom: var(--desktop-scale);
+  }
+}
+
+@supports not (zoom: 1) {
+  @media (min-width: 901px) and (max-resolution: 1.9dppx) {
+    :root {
+      --nav-width: calc(220px * var(--desktop-scale));
+      --content-max: calc(900px * var(--desktop-scale));
+      --section-pad: calc(6rem * var(--desktop-scale));
+    }
+
+    html {
+      font-size: calc(100% * var(--desktop-scale));
+    }
+
+    .hero-grid {
+      grid-template-columns: 1fr calc(280px * var(--desktop-scale));
+    }
+
+    .hero-photo-frame {
+      width: calc(260px * var(--desktop-scale));
+      height: calc(320px * var(--desktop-scale));
+    }
   }
 }
 
