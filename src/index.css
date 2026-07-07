@@ -14,6 +14,7 @@
   --sans: "Outfit", system-ui, sans-serif;
   --nav-width: 220px;
   --content-max: 900px;
+  --layout-max: calc(var(--nav-width) + var(--content-max));
   --section-pad: 6rem;
 }
 
@@ -276,7 +277,27 @@ body.production-mode .mode-dot {
 .content {
   margin-left: var(--nav-width);
   padding: 0 3rem 4rem;
-  max-width: calc(var(--content-max) + var(--nav-width) + 6rem);
+  max-width: var(--content-max);
+  width: calc(100% - var(--nav-width));
+}
+
+@media (min-width: 901px) {
+  .side-nav {
+    left: 50%;
+    right: auto;
+    transform: translateX(calc(var(--layout-max) / -2));
+  }
+
+  .content {
+    margin-left: calc(50% - var(--layout-max) / 2 + var(--nav-width));
+    width: var(--content-max);
+    max-width: var(--content-max);
+  }
+
+  .hero {
+    min-height: clamp(520px, 85vh, 720px);
+    padding: clamp(3rem, 6vh, 4.5rem) 0;
+  }
 }
 
 /* Hero */
@@ -753,6 +774,15 @@ body.production-mode .mode-dot {
   color: var(--text-muted);
   margin-bottom: 1rem;
   line-height: 1.5;
+}
+
+.project-card code {
+  font-family: var(--mono);
+  font-size: 0.85em;
+  color: var(--text-bright);
+  background: var(--surface-2);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
 }
 
 .project-tech {
